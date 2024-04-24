@@ -1,47 +1,49 @@
 body{
-    background-color: rgb(34, 34, 34);
-    color: white;
-    font-family: poppinsregular;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-}
+   background-color: rgb(34,34,34);
+   color: white; /*Define a cor padrão do texto em todo o body*/
+   font-family: poppinsregular;
+   max-width: 1200px;
+   margin: 0 auto; /*Mantem o eslementos centralizados ao usar o scroll do mouse*/
+   padding: 15px; /*Espaçamento interno. Mantem todos os elementos condensados, espremidos no meio do body*/
+}  
 
 header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#title{
-    flex-direction: column;
-    line-height: 10px;
+    display: flex; /*Transforma o cabeçalho em um flex box. Flexibiliza os elementos do cabeçalho permitindo configurar sua posição*/
+    flex-direction: row; /*Essa configuração alinha os elementos do cabeçalho horizontalmente, em linha.
+                         De modo prático, nessa página, os elemetos div e ul são posicionados uma ao lado do outro*/
+    justify-content: space-between; /*Cria um espaço entre a div e a lista. "Joga" a div para a direita e a lista para a esquerda*/
 }
 
 li{
     display: inline-block;
-    margin: 20px;
+    margin: 20px; /*Adiciona espaço entre os itens da lista*/
 }
 
 a{
+    text-decoration: none;
     color: white;
 }
 
 a:hover{
-    color: rgb(132, 14, 201);
-    transition: 0.3s all;
+    color: blueviolet;
+    transition: 300ms all;
 }
 
-#inscreva-se-btn{
-    border: 2px solid rgb(132, 14, 201);
-    padding: 10px;
+#inscreva-se-button{
+    border: 2px solid blueviolet;
     border-radius: 15px;
+    padding: 10px;
+    
 }
 
-#inscreva-se-btn:hover{
-    background-color: rgb(132, 14, 201);
+#inscreva-se-button:hover{
+    background-color: blueviolet;
     color: white;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px; /*Diminui a distançia entre linhas das tags h1*/
 }
 
 h1{
@@ -51,17 +53,17 @@ h1{
 main{
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 50px;/*Ao criar essa margem no topo da main, "empurramos" a main para baixo. O objetivo e "desgrudar" a main do header*/
 }
 
 h2{
     font-size: 56px;
-    line-height: 10px;
-    font-family: poppinsmedium;
+    line-height: 10px;/*Da mesma forma que foi feito com o title. Diminuimos a distancia entre as linhas */
+    font-family: poppinsbold;
 }
 
 span{
-    color: rgb(132, 14, 201);
+    color:blueviolet
 }
 
 p{
@@ -83,19 +85,21 @@ form{
 form [type="submit"]{
     height: 50px;
     width: 50%;
-    background-color: rgb(132, 14, 201);
+    background-color: blueviolet;
     color: white;
     font-weight: bold;
 }
+
 form [type="submit"]:hover{
     cursor: pointer;
 }
 
 input{
-    margin-top: 20px;
-    height: 20px;
-    padding: 15px;
+    margin-top: 20px;/*Deixa os inputs mais afastados uns dos outros*/
+    height: 20px;/*Altura dos formulários*/
+    padding: 20px;
     border-radius: 20px;
     border: none;
     font-size: 15px;
+
 }
